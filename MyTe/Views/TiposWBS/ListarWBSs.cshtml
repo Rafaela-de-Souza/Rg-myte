@@ -1,0 +1,62 @@
+﻿@model IEnumerable<MyTe.Models.Entities.WBS>
+
+@{
+    ViewData["Title"] = "ListarWBSs";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"> </head>
+<body>
+
+    <center>
+        <h1>Lista de WBS</h1>
+    </center>
+    <center>
+        <p>
+            <a asp-action="IncluirWBS" class="btn btn-success">Nova WBS</a>
+        </p>
+    </center>
+
+    <table class="tabelas">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.CodigoWBS)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Descricao)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Tipo)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CodigoWBS)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Descricao)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Tipo)
+                    </td>
+                    <td>
+                        <center>
+                            <a asp-action="AlterarWBS" asp-route-id="@item.Id"><i class="bi bi-pencil-square custom-icon"></i></a>
+                            <a asp-action="RemoverWBS" asp-route-id="@item.Id"><i class="bi bi-trash3-fill custom-icon"></i></a>
+                        </center>                        
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</body>
+</html>

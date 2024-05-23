@@ -1,0 +1,27 @@
+﻿@using Microsoft.AspNetCore.Identity;
+@using MyTe.Models.Common
+@inject UserManager<IdentityUser> UserManager
+@inject SignInManager<IdentityUser> SignInManager
+
+@if(SignInManager.IsSignedIn(User))
+{
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link text-white" asp-controller="Autenticacao" asp-action="Home">Bem vindo, @Utils.UsuarioLogado!.Usuario</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-white" asp-controller="Autenticacao" asp-action="Logout">Logout</a>
+        </li>
+    </ul>
+}
+else
+{
+<ul class="navbar-nav">
+    <li class="nav-item">
+        <a class="nav-link text-white" asp-controller="Autenticacao" asp-action="Registrar">Novo Usuário</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link text-white" asp-controller="Autenticacao" asp-action="Login">Login</a>
+    </li>
+</ul>
+}

@@ -1,0 +1,63 @@
+﻿/*Menu, nav/bar*/
+nav {
+    background-image: linear-gradient(to right, #ff5800, #890078);
+}
+
+/*negrito do bar*/
+a:hover {
+    font-weight: bold;
+}
+
+
+/*Todas as Body */
+/*body{
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}*/
+
+Somente o bem-vindo Body
+body.home {
+    background-image: url('../avnd0001 _avanade master dwm endboard 2024 copyright 16x9.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+/*Tabela de Horas linq*/
+/*Tamanho da tabela*/
+.tabelas {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+    /*Coluna tabela*/
+    .tabelas td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+    }
+    /*Linha tabela*/
+    .tabelas th {
+        background-color: #ff5800;
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+    }
+    /*Linha alternativa da tabela*/
+    .tabelas tbody tr:nth-child(even) {
+        background-color: #f9f9f9;
+    }
+
+i {
+    font-size: 1.5rem;
+    color: #ff5800;
+    transition: color 0.3s ease;
+}
+
+
+
+.custom-icon:hover {
+    color: #890078;
+} 
+
