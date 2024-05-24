@@ -4,11 +4,10 @@
     ViewData["Title"] = "AlterarWBS";
 }
 
-<h1>Alteração na descrição da WBS</h1>
+<h1 class="text-center">Alteração da WBS</h1>
 
-<hr />
-<div class="row">
-    <div class="col-md-4">
+<div class="row center-div">
+    <div class="col-md-4 card">
         <form asp-action="AlterarWBS">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="mb-3">
@@ -33,7 +32,6 @@
     </div>
 </div>
 
-<div>
+<div class="text-center mt-3">
     <a asp-action="ListarWBSs">Voltar para a lista de WBS</a>
 </div>
-

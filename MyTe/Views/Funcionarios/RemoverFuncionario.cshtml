@@ -1,10 +1,13 @@
-﻿@model MyTe.Models.Entities.Funcionario
+﻿
+<body class="remover">
+<div style="text-align: center;">
+@model MyTe.Models.Entities.Funcionario
 
 @{
     ViewData["Title"] = "Remover Funcionário";
 }
 
-<h3>Tem ceteza que deseja remover '@Model.Nome' ?</h3>
+<h3>Tem ceteza que deseja Remover '@Model.Nome' ?</h3>
 <div>
 
 
@@ -14,3 +17,5 @@
         <a asp-action="ListarFuncionarios">Não, voltar para a lista</a>
     </form>
 </div>
+</div>
+</body>

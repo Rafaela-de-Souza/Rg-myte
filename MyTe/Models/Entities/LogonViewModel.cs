@@ -1,15 +1,18 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 
 namespace MyTe.Models.Entities
 {
     public class LogonViewModel
     {
         [Required]
-        [EmailAddress] 
+        [EmailAddress]
+        [DisplayName("E-mail:")]
         public string? Email { get; set; }
 
         [Required]
         [DataType(DataType.Password)]
+        [DisplayName("Senha:")]
         public string? Senha { get; set; }
 
         [Display(Name = "Lembrar-me")]
